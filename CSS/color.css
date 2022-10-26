@@ -47,10 +47,18 @@
     background-color: rgb(255, 99, 71);
 }
 
-.t2 {
+.t3 {
     background-color: #ff6347;
 }
 
-.t3 {
-    background-color: hsl(9, 100, 64);
+.t4 {
+    background-color: hsl(9, 100%, 64%);
+}
+
+.t5 {
+    background-color: rgba(255, 99, 71, 0.5);
+}
+
+.t6 {
+    background-color: hsla(9, 100%, 64%, .5);
 }
