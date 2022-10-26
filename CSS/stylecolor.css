@@ -41,3 +41,16 @@
 .pr2 { 
     color: hotpink;
 }
+
+
+.t2 {
+    background-color: rgb(255, 99, 71);
+}
+
+.t2 {
+    background-color: #ff6347;
+}
+
+.t3 {
+    background-color: hsl(9, 100, 64);
+}
