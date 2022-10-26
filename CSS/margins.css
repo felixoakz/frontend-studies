@@ -1,0 +1,26 @@
+div {
+    border: 1px solid black;
+    margin-top: 35px;
+    margin-right: 150px;
+    margin-bottom: 75px;
+    margin-left: 150px;
+    /*margin: 35px 150px 75px 150px, de forma resumida na ordem horaria*/
+    /*margin: 35px 150px 75px* com os px do meio referindo aos lados*/
+    /*margin: 35px 75px* com os px referindo a X e Y.*/
+    background-color: burlywood;
+    padding: 20px 20px;
+    /*mesmas regras da margem se aplicam e podem ser usadas*/
+}
+
+.div1 {
+    height: 200px;
+    width: 50%; /*relacao ao tam da pag*/
+    background-color: coral;
+    padding: 50px 20px;
+}
+
+.div2 {
+    max-width: 500px;
+    height: 100px;
+    background-color: cornflowerblue;
+}
