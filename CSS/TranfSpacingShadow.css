@@ -14,6 +14,26 @@
     text-indent: 50px;
 }
 
+.h1 {
+    letter-spacing:10px;
+}
+
+.h2 {
+    letter-spacing: -2px;
+}
+
 .p5 {
-    
+    line-height: 0.7;
+}
+
+.p6 {
+    line-height: 2;
+}
+
+.p7 {
+    word-spacing: 10px;
+}
+
+.p8 {
+    word-spacing: -5px;
 }
