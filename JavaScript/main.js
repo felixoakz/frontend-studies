@@ -16,4 +16,4 @@ console.log(f);
 // ---- declaracao igual a var
 
 // ----------- operadores
-
+7 === 7 //-- compatador de igualdade de valor e tipo de dados
