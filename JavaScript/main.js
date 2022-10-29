@@ -17,3 +17,11 @@ console.log(f);
 
 // ----------- operadores
 7 === 7 //-- compatador de igualdade de valor e tipo de dados
+
+
+// swich case
+
+for (let i = 0, i < 10; i++)
+    {
+        console.log(i);
+    }
