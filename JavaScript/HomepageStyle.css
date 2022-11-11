@@ -12,11 +12,13 @@ body {
 
  #prTex {
     color: rgb(178, 178, 178);
+    padding: 20px;
 }
 
 #secTex {
     color: rgb(255, 253, 130);
     text-align: center;
+    padding: 20px;
 }
 
 #righties {
