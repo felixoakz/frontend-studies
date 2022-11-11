@@ -1,9 +1,9 @@
 .header {
     background-color: rgb(178, 178, 178);
     color: rgb(37, 37, 37);
-    margin-bottom: 2rem;
-    padding: 4rem 2rem;
+    padding: 2rem;
     text-align: center;
+    font-size: 3rem;
 }
 
 body {
@@ -15,6 +15,18 @@ body {
 }
 
 #secTex {
-color: rgb(240, 93, 35);
+color: rgb(252, 236, 82);
 text-align: center;
+}
+
+#righties {
+    text-align: right;
+    padding: .5rem;
+}
+
+.footer {
+    color: rgb(164, 66, 0);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
 }
