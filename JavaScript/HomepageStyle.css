@@ -10,7 +10,12 @@ body {
     background-color: rgb(37, 37, 37);
 }
 
- #t1 {
+ #prTex {
     color: rgb(178, 178, 178);
 }
 
+ #secTex {
+    color: rgb(240, 93, 35);
+    text-align: center;
+ }
+ 
