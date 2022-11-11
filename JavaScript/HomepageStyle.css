@@ -27,7 +27,7 @@ body {
     padding: .5rem;
 }
 
-.footer {
+#footer {
     background-color: rgb(255, 253, 130);
     color: rgb(37, 37, 37);
     padding: 1rem;
