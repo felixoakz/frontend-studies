@@ -1,0 +1,22 @@
+
+4 different .html pages one being index.html as mais page and be possible to acess it from any other page.
+
+10 distinct html tags
+
+integrate one of more features from bootstrap:
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link href="styles.css" rel="stylesheet">
+        to link own css.
+
+have at least one stylesheet of my creation (style.css) with at least 5 different css selectors and 5 different css properties.
+
+integrate one or more features of javascript to make more interactive, alerts, effect on recurring interval, button interactivity dropdown or forms
+
+ensure site works on mobile and laptop and desktop
+
+Recall also that by opening Developer Tools in Google Chrome, you can simulate visiting your page on a mobile device by clicking
+    the phone-shaped icon to the left of Elements in the developer tools window, or, once the Developer Tools tab has already been opened,
+        by typing Ctrl+Shift+M on a PC or Cmd+Shift+M on a Mac, rather than needing to visit your site on a mobile device separately!
+
