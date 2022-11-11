@@ -1,6 +1,14 @@
+.header {
+    background-color: rgb(178, 178, 178);
+    color: rgb(37, 37, 37);
+    margin-bottom: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
 body {
     background-color: rgb(37, 37, 37);
- }
+}
 
  #t1 {
     color: rgb(178, 178, 178);
