@@ -19,7 +19,8 @@ body {
 #secTex {
     color: rgb(255, 253, 130);
     text-align: center;
-    padding: 20px;
+    text-decoration: underline;
+    padding: 50px;
 }
 
 #righties {
@@ -27,7 +28,7 @@ body {
     padding: .5rem;
 }
 
-#footer {
+footer {
     background-color: rgb(255, 253, 130);
     color: rgb(37, 37, 37);
     padding: 1rem;
@@ -37,5 +38,4 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    
 }
