@@ -3,7 +3,7 @@ body {
     background-color: rgb(37, 37, 37);
 }
 
-.header {
+h1 {
     background-color: rgb(178, 178, 178);
     color: rgb(37, 37, 37);
     padding: 2rem;
@@ -22,27 +22,6 @@ body {
     color: rgb(178, 178, 178);
     padding: 20px;
 }
-
-#righties {
-    text-align: right;
-    padding: .5rem;
-}
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
-  }
-  
-  #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;            /* Footer height */
-  }
 
 footer {
     background-color: rgb(255, 253, 130);
