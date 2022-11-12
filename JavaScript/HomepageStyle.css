@@ -11,16 +11,16 @@ body {
     font-size: 3rem;
 }
 
-#prTex {
-    color: rgb(178, 178, 178);
-    padding: 20px;
-}
-
-#secTex {
+#texTitulo {
     color: rgb(255, 253, 130);
     text-align: center;
     text-decoration: underline;
     padding: 50px;
+}
+
+#texto {
+    color: rgb(178, 178, 178);
+    padding: 20px;
 }
 
 #righties {
