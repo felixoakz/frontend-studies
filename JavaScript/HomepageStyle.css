@@ -1,14 +1,12 @@
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(178, 178, 178);
 }
 
-h1 {
-    background-color: rgb(178, 178, 178);
-    color: rgb(37, 37, 37);
-    padding: 2rem;
-    text-align: center;
-    font-size: 3rem;
+
+div#google_translate_element {
+    text-align: right;
+    margin: .5rem;
 }
 
 #texTitulo {
@@ -19,18 +17,20 @@ h1 {
 }
 
 #texto {
-    color: rgb(178, 178, 178);
-    padding: 20px;
+    color: rgb(33, 37, 41);
 }
 
 footer {
-    background-color: rgb(255, 253, 130);
-    color: rgb(37, 37, 37);
+    background-color: rgb(33, 37, 41);
+    color: rgb(255, 253, 130);
     padding: 1rem;
     text-align: center;
     font-size: 1.2rem;
-    border-style: solid;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.navbar-custom {
+    background-color: #ff5500;
 }
