@@ -1,4 +1,3 @@
-
 var jcontent = {
     "first name": "john",
     "lastname": "smith"
