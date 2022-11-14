@@ -1,6 +1,6 @@
 body {
     font-family: "Source Code Pro", monospace;
-    background-color: rgb(178, 178, 178);
+    background-color: rgb(246, 232, 234);
 }
 
 
@@ -11,9 +11,9 @@ div#google_translate_element {
 
 #texTitulo {
     color: rgb(255, 253, 130);
-    text-align: center;
     text-decoration: underline;
-    padding: 50px;
+    margin: 4rem;
+
 }
 
 #texto {
