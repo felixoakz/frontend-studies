@@ -9,17 +9,6 @@ div#google_translate_element {
     margin: .5rem;
 }
 
-#texTitulo {
-    color: rgb(255, 253, 130);
-    text-decoration: underline;
-    margin: 4rem;
-
-}
-
-#texto {
-    color: rgb(33, 37, 41);
-}
-
 footer {
     background-color: rgb(33, 37, 41);
     color: rgb(255, 253, 130);
@@ -31,9 +20,6 @@ footer {
     width: 100%;
 }
 
-.navbar-custom {
-    background-color: #ff5500;
-}
 
 div#pagebox {
     margin: 5rem;
