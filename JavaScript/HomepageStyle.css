@@ -34,3 +34,7 @@ footer {
 .navbar-custom {
     background-color: #ff5500;
 }
+
+div#pagebox {
+    margin: 5rem;
+}
