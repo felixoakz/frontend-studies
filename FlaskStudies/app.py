@@ -4,4 +4,5 @@ app = Flask(__name__) #refers to name of current file 'says hey flask turn this 
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	name = request.args.get("name")
+	return render_template("index.html", name=name)
