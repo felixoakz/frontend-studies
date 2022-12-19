@@ -1,6 +1,6 @@
-from flash import Flask, render_template, request
+from flask import Flask, render_template, request
 
-app = Flask(__Name__)
+app = Flask(__name__)
 
 
 @app.route("/")
