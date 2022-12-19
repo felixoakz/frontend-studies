@@ -17,4 +17,3 @@ def register():
 
     # confirm registration
     return render_template("success.html")
-
