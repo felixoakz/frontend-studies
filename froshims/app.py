@@ -30,8 +30,7 @@ def register():
         return render_template("error.html", message="Missing sport!")
     if sport not in SPORTS:
         return render_template("error.html", message="Invalid sport!")
-    # confirm registration
-    return render_template("success.html")
+
 
     # remember registrants
     REGISTRANTS[name] = sport
