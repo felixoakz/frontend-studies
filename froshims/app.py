@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 db = sqlite3("sqlite:///froshims.db")
 
-REGISTRANTS = {}
 
 SPORTS = [
     "Basketball",
