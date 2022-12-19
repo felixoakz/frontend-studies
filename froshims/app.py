@@ -3,7 +3,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-db = sqlite3("sqlite:///froshims.db")
+db = sqlite3.connect("froshims.db")
 
 
 SPORTS = [
