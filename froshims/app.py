@@ -18,7 +18,8 @@ def index():
 
 @app.route("/register", methods=["POST"])
 def register():
-    # validate name
+    
+    # validate user name
     name = request.form.get("name")
     if not name:
         return render_template("error.html", message="Missing name")
@@ -31,3 +32,10 @@ def register():
         return render_template("error.html", message="Invalid sport!")
     # confirm registration
     return render_template("success.html")
+
+    # remember registrants
+    REGISTRANTS[name] = sport
+    
+    # confirm registration
+    return redirect("/registrants")
+
