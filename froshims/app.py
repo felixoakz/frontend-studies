@@ -38,7 +38,7 @@ def register():
         return render_template("error.html", message="Missing name or sport not existent.")
     
     # Remember registrant
-    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
+    db.execute("INSERT INTO registrants (name, sport) VALUES (?, ?)", name, sport)
 
     # Confirm registration
     return redirect("/registrants")
