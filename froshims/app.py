@@ -20,8 +20,8 @@ def index():
 
 @app.route("/deregister", methods=["POST"])
 def deregister():
-    
-    # forget registrant
+
+    # Forget registrant
     id = request.form.get("id")
     if id:
         db.execute("DELETE FROM registrants WHERE id = ?", id)
@@ -30,17 +30,17 @@ def deregister():
 
 @app.route("/register", methods=["POST"])
 def register():
-    
-    # validate user name
+
+    # Validate submission
     name = request.form.get("name")
     sport = request.form.get("sport")
     if not name or sport not in SPORTS:
         return render_template("error.html", message="Missing name or sport not existent.")
     
-    # remember registrant
+    # Remember registrant
     db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
-    
-        # confirm registration
+
+    # Confirm registration
     return redirect("/registrants")
     
 
