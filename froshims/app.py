@@ -33,22 +33,17 @@ def register():
     
     # validate user name
     name = request.form.get("name")
-    if not name:
-        return render_template("error.html", message="Missing name")
-    
-    # validate sport
     sport = request.form.get("sport")
-    if not sport:
-        return render_template("error.html", message="Missing sport!")
-    if sport not in SPORTS:
-        return render_template("error.html", message="Invalid sport!")
-
-
-    # remember registrants
-    REGISTRANTS[name] = sport
+    if not name or sport not in SPORTS:
+        return render_template("error.html", message="Missing name or sport not existent.")
     
-    # confirm registration
+    # remember registrant
+    db.execute("INSERT INTO registrants (name, sport) VALUES(?, ?)", name, sport)
+    
+        # confirm registration
     return redirect("/registrants")
+    
+
 
 @app.route("/registrants")
 def registrants():
