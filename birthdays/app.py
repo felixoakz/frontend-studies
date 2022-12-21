@@ -1,7 +1,5 @@
-import os
-
-from cs50 import SQL
-from flask import Flask, flash, jsonify, redirect, render_template, request, session
+import sqlite3
+from flask import Flask, redirect, render_template, request
 
 # Configure application
 app = Flask(__name__)
@@ -10,7 +8,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///birthdays.db")
+db = sqlite3.connect('birthdays.db')
 
 
 @app.after_request
