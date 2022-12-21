@@ -1,49 +1,42 @@
+/* reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set base font and color */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
-  }
-  
-  section {
-    background-color: #eee;
-    border: 1px solid #333;
-    padding: 20px;
-    width: 30%;
-  }  
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* style header */
+header {
+  background-color: #eee;
+  padding: 20px;
+}
+
+/* style navigation */
+nav {
+  background-color: #ccc;
+  padding: 10px;
+}
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* style main content */
+main {
+  padding: 20px;
+}
+
+/* style footer */
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
