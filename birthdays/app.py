@@ -8,7 +8,9 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database
-db = sqlite3.connect('birthdays.db')
+conn = sqlite3.connect('birthdays.db')
+print('Database connected successfully')
+conn.close()
 
 
 @app.after_request
@@ -27,6 +29,8 @@ def index():
         name = request.form.get("name")
         day = request.form.get("day")
         month = request.form.get("month")
+        
+        with db.conn
 
         db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
 
@@ -35,3 +39,4 @@ def index():
     else:
         birthdays = db.execute("SELECT * FROM birthdays")
         return render_template("index.html", birthdays=birthdays)
+
