@@ -10,6 +10,9 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure CS50 Library to use SQLite database
 conn = sqlite3.connect('birthdays.db')
 print('>>>> Database connected successfully')
+
+if not 'birthdays.db':
+    conn.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
 conn.close()
 
 
