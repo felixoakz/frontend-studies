@@ -9,7 +9,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # Configure CS50 Library to use SQLite database
 conn = sqlite3.connect('birthdays.db')
-print('Database connected successfully')
+print('>>>> Database connected successfully')
 conn.close()
 
 
@@ -30,7 +30,6 @@ def index():
         day = request.form.get("day")
         month = request.form.get("month")
         
-        with db.conn
 
         db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
 
