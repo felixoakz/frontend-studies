@@ -7,18 +7,26 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-# Configure CS50 Library to use SQLite database
 conn = sqlite3.connect('birthdays.db')
-print('>>>> Database connected successfully')
+print('>>>> SERVER MESSAGE: DATABASE EXISTS AND CONNECTED SUCCESSFULLY')
 
-if not 'birthdays.db':
-    conn.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
+cursor = conn.cursor()
+
+# Check if the table already exists
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='birthdays'")
+result = cursor.fetchone()
+
+# If the table does not exist, create it
+if result is None:
+    cursor.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
+    print('>>> SERVER MESSAGE: DATABASE CREATED')
+
 conn.close()
 
 
 @app.after_request
 def after_request(response):
-    """Ensure responses aren't cached"""
+    # Ensure responses aren't cached
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
@@ -34,11 +42,11 @@ def index():
         month = request.form.get("month")
         
 
-        db.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
+        conn.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
 
         return redirect("/")
 
     else:
-        birthdays = db.execute("SELECT * FROM birthdays")
+        birthdays = conn.execute("SELECT * FROM birthdays")
         return render_template("index.html", birthdays=birthdays)
 
