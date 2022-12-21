@@ -37,7 +37,7 @@ def after_request(response):
     return response
 
 
-
+# index route, 
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
@@ -46,12 +46,12 @@ def index():
         day = request.form.get("day")
         month = request.form.get("month")
         
-
-        conn.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
-
+        cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
+        conn.close()
         return redirect("/")
 
     else:
-        birthdays = conn.execute("SELECT * FROM birthdays")
+        birthdays = cursor.execute("SELECT * FROM birthdays")
+        conn.close()
         return render_template("index.html", birthdays=birthdays)
 
