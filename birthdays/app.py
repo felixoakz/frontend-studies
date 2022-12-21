@@ -55,4 +55,3 @@ def index():
         birthdays = cursor.execute("SELECT * FROM birthdays")
         conn.close()
         return render_template("index.html", birthdays=birthdays)
-
