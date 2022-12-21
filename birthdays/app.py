@@ -24,7 +24,6 @@ print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
 if result is None:
     cursor.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
-conn.close()
 
 
 
@@ -46,12 +45,11 @@ def index():
         day = request.form.get("day")
         month = request.form.get("month")
         # insert given variables into database
-        cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
-        conn.close()
+        cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", (name, day, month))
+        conn.commit()
         return redirect("/")
 
     else:
         # show all database
         birthdays = cursor.execute("SELECT * FROM birthdays")
-        conn.close()
         return render_template("index.html", birthdays=birthdays)
