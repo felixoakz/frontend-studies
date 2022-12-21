@@ -51,5 +51,6 @@ def index():
 
     else:
         # show all database
-        birthdays = cursor.execute("SELECT * FROM birthdays")
+        cursor.execute("SELECT * FROM birthdays")
+        birthdays = cursor.fetchall()
         return render_template("index.html", birthdays=birthdays)
