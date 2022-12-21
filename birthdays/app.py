@@ -11,7 +11,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
 # create database cursor and connect database
-conn = sqlite3.connect('birthdays.db')
+conn = sqlite3.connect('birthdays.db', check_same_thread=False)
 print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
 cursor = conn.cursor()
 
@@ -28,29 +28,30 @@ conn.close()
 
 
 
+# Ensure responses aren't cached
 @app.after_request
 def after_request(response):
-    # Ensure responses aren't cached
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
 
 
-# index route, 
+# index route
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
-
+        # assign respective html form variables to its variables
         name = request.form.get("name")
         day = request.form.get("day")
         month = request.form.get("month")
-        
+        # insert given variables into database
         cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", name, day, month)
         conn.close()
         return redirect("/")
 
     else:
+        # show all database
         birthdays = cursor.execute("SELECT * FROM birthdays")
         conn.close()
         return render_template("index.html", birthdays=birthdays)
