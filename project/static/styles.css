@@ -10,17 +10,11 @@ div#google_translate_element {
 }
 
 footer {
-    background-color: rgb(33, 37, 41);
-    color: rgb(255, 253, 130);
-    padding: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-}
+  }
 
 
 div#pagebox {
@@ -30,9 +24,3 @@ div#pagebox {
 @media (min-width: 992px) {
     .rounded-lg-3 { border-radius: .3rem; }
 }
-
-.sticky-bottom {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
