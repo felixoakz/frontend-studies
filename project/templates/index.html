@@ -5,37 +5,32 @@
 {% endblock %}
 
 {% block main %}
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th class="text-start">Symbol</th>
-                <th class="text-start">Name</th>
-                <th class="text-end">Shares</th>
-                <th class="text-end">Current Price</th>
-                <th class="text-end">TOTAL</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for stock in portifolio %}
-                <tr>
-                    <td class="text-start">{{ stock.symbol }}</td>
-                    <td class="text-start">{{ stock.name }}</td>
-                    <td class="text-end">{{ stock.shares }}</td>
-                    <td class="text-end">{{ stock.price | usd }}</td>
-                    {% set totalstock = stock.shares * stock.price %}
-                    <td class="text-end">{{ totalstock | usd }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-        <tfoot>
-            <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
-                <td class="border-0 text-end">{{ cash | usd }}</td>
-            </tr>
-            <tr>
-                <td class="border-0 fw-bold text-end" colspan="4">Total</td>
-                <td class="border-0 w-bold text-end">{{ total }}</td>
-            </tr>
-        </tfoot>
-    </table>
+    <div id="google_translate_element"></div>
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script>
+            function googleTranslateElementInit(){
+                new google.translate.TranslateElement(
+                    {pageLanguage: 'en'},
+                    'google_translate_element'
+                );
+            }
+        </script>
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="cheatsheat.png" alt="" width="">
+            <h1 class="fw-bold m-5">This page will serve as an attachment to your brain's "database"</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">Mostly when we are learning a new thing, we can often get a bit anxious about the amount of information we find.
+                This is because there are a LOT of shortcuts and commands in the various tools we need to learn.
+                And we still need to master and use all of this while we're learning and building even bigger things.<br><br>
+    
+                The goal here is to have a simple page to compile a variety of sources of tips and techniques from the internet.
+                This allows us to easily identify what really matters. We can then gradually learn and use those more important commands
+                until it becomes natural, giving us more time and energy to focus on what really matters right now.</p>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'sql.html'" >SQL</button>
+            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'git.html'">GIT</button>
+            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'vscode.html'">VSCODE</button>
+        </div>
 {% endblock %}
