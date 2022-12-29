@@ -23,7 +23,6 @@ if result is None:
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
 
 
-
 # Ensure responses aren't cached
 @app.after_request
 def after_request(response):
