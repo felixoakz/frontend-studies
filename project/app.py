@@ -7,8 +7,6 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-
-
 # create database cursor and connect database
 conn = sqlite3.connect('birthdays.db', check_same_thread=False)
 print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
