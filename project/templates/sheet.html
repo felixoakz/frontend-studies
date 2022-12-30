@@ -20,10 +20,12 @@
             </thead>
 
             <tbody>
+                {% for sheet in cheatsheet %}
                 <tr>
-                    <td>select all next occurrences</td>
-                    <td>ctrl+shift+L</td>
+                    <td>{{ cheatsheet.description }}</td>
+                    <td>{{ cheatsheet.command }}</td>
                 </tr>
+                {% endfor %}
             </tbody>
 
         </table>
