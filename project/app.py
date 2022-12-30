@@ -22,7 +22,8 @@ SHEETS = [
     "HTML"
 ]
 
-SQL = [{"command": "SELECT", "description": "Retrieves data from a database table."},
+SQL = [
+{"command": "SELECT", "description": "Retrieves data from a database table."},
 {"command": "INSERT INTO", "description": "Inserts new data into a database table."},
 {"command": "UPDATE", "description": "Modifies existing data in a database table."},
 {"command": "DELETE FROM", "description": "Deletes data from a database table."},
