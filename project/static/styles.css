@@ -5,7 +5,7 @@ body {
 
 
 div#google_translate_element {
-    text-align: right;
+    text-align: left;
 }
 
 footer {
@@ -13,14 +13,3 @@ footer {
     left: 0;
     right: 0;
   }
-
-
-  
-
-div#pagebox {
-    margin: 10rem;
-}
-
-@media (min-width: 992px) {
-    .rounded-lg-3 { border-radius: .3rem; }
-}
