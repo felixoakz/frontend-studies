@@ -15,24 +15,6 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-
-
-# create database cursor and connect database
-conn = sqlite3.connect('cheatsheet.db', check_same_thread=False)
-print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
-cursor = conn.cursor()
-
-# Check if the table already exists
-cursor.execute("SELECT * FROM sqlite_master WHERE type='table' AND name='cheatsheet'")
-result = cursor.fetchone()
-if result != None:
-    print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
-# If the table does not exist, create it
-else:
-    cursor.execute("CREATE TABLE cheatsheet (description TEXT, command TEXT)")
-    print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
-
-
 SHEETS = [
     "SQL",
     "VSCODE",
@@ -40,8 +22,33 @@ SHEETS = [
     "HTML"
 ]
 
-     
-
+SQL = [{"command": "SELECT", "description": "Retrieves data from a database table."},
+{"command": "INSERT INTO", "description": "Inserts new data into a database table."},
+{"command": "UPDATE", "description": "Modifies existing data in a database table."},
+{"command": "DELETE FROM", "description": "Deletes data from a database table."},
+{"command": "CREATE TABLE", "description": "Creates a new database table."},
+{"command": "DROP TABLE", "description": "Deletes a database table."},
+{"command": "ALTER TABLE", "description": "Modifies the structure of a database table."},
+{"command": "SELECT DISTINCT", "description": "Retrieves unique data from a database table."},
+{"command": "WHERE", "description": "Filters results based on specified conditions."},
+{"command": "AND/OR", "description": "Combines multiple conditions in a WHERE clause."},
+{"command": "ORDER BY", "description": "Sorts results in ascending or descending order."},
+{"command": "GROUP BY", "description": "Groups results by a specified column or columns."},
+{"command": "HAVING", "description": "Filters grouped results based on specified conditions."},
+{"command": "JOIN", "description": "Retrieves data from multiple tables based on a common column."},
+{"command": "INNER JOIN", "description": "Retrieves data from two tables where there is a match in both tables."},
+{"command": "LEFT JOIN", "description": "Retrieves all data from the left table and matching data from the right table."},
+{"command": "RIGHT JOIN", "description": "Retrieves all data from the right table and matching data from the left table."},
+{"command": "FULL OUTER JOIN", "description": "Retrieves all data from both tables, regardless of whether there is a match in both."},
+{"command": "UNION", "description": "Combines the results of two SELECT statements."},
+{"command": "UNION ALL", "description": "Combines the results of two SELECT statements, including duplicate rows."},
+{"command": "MIN/MAX", "description": "Returns the minimum or maximum value in a column."},
+{"command": "COUNT", "description": "Counts the number of rows in a table."},
+{"command": "AVG", "description": "Calculates the average value in a column."},
+{"command": "SUM", "description": "Calculates the sum of values in a column."},
+{"command": "TRUNCATE TABLE", "description": "Deletes all data from a table, but does not delete the table structure."},
+{"command": "TRANSACTION", "description": "Controls the commit or rollback of a series of database queries."}
+]
 
 # index route
 @app.route("/", methods=["GET", "POST"])
