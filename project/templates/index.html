@@ -36,7 +36,7 @@
         <!-- button of each sheet -->
         <form action="/index" method="post">
             {% for sheet in sheets %}
-            <input type="submit" class="btn btn-primary btn-dark my-4" name="sheet" href="static/sheet.html" value="{{ sheet }}">
+            <input type="submit" class="btn btn-primary btn-dark my-4" name="sheet" value="{{ sheet }}">
             {% endfor %}
         </form>
 
