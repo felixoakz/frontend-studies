@@ -45,6 +45,8 @@ def index():
     if request.method == "GET":
         return render_template("index.html", sheets=SHEETS)
     else:
+        sheet = request.form.get("sheet")
+        print(f'SYSTEM MSG:{sheet}')
         return render_template("sheets.html", sheets=SHEETS)
         
     
