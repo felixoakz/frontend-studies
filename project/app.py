@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 # create database cursor and connect database
-conn = sqlite3.connect('birthdays.db', check_same_thread=False)
+conn = sqlite3.connect('cheatsheet.db', check_same_thread=False)
 print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
 cursor = conn.cursor()
 
@@ -19,7 +19,7 @@ if result != None:
     print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
 # If the table does not exist, create it
 else:
-    cursor.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
+    cursor.execute("CREATE TABLE cheatsheet (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
 
 
