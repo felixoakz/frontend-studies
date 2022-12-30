@@ -13,13 +13,13 @@ print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
 cursor = conn.cursor()
 
 # Check if the table already exists
-cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='birthdays'")
+cursor.execute("SELECT * FROM sqlite_master WHERE type='table' AND name='cheatsheet'")
 result = cursor.fetchone()
 if result != None:
     print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
 # If the table does not exist, create it
 else:
-    cursor.execute("CREATE TABLE cheatsheet (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
+    cursor.execute("CREATE TABLE cheatsheet (description TEXT, command TEXT)")
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
 
 
