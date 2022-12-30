@@ -7,6 +7,16 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+# Ensure responses aren't cached
+@app.after_request
+def after_request(response):
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Expires"] = 0
+    response.headers["Pragma"] = "no-cache"
+    return response
+
+
+
 # create database cursor and connect database
 conn = sqlite3.connect('cheatsheet.db', check_same_thread=False)
 print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
@@ -21,15 +31,6 @@ if result != None:
 else:
     cursor.execute("CREATE TABLE cheatsheet (description TEXT, command TEXT)")
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
-
-
-# Ensure responses aren't cached
-@app.after_request
-def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers["Expires"] = 0
-    response.headers["Pragma"] = "no-cache"
-    return response
 
 
 SHEETS = [
