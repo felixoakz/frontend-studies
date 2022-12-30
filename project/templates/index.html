@@ -34,9 +34,9 @@
         </div>
         
         <!-- button of each sheet -->
-        <div action="/sheet" method="post">
+        <div method="post" action="/">
             {% for sheet in sheets %}
-            <button class="btn btn-primary btn-dark my-4" name="sport" type="button" value="{{ sheet }}">{{ sheet }}</button>
+            <button class="btn btn-primary btn-dark my-4" name="sheet" type="button" value="{{ sheet }}">{{ sheet }}</button>
             {% endfor %}
         </div>
 
