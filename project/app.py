@@ -16,11 +16,10 @@ cursor = conn.cursor()
 try:
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='birthdays'")
     result = cursor.fetchone()
-except:
+if result != None:
     print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
-
 # If the table does not exist, create it
-if result is None:
+else:
     cursor.execute("CREATE TABLE birthdays (id INTEGER, name TEXT, day INTEGER, month INTEGER, PRIMARY KEY(id))")
     print('>>> SERVER MESSAGE: NEW DATABASE TABLE CREATED')
 
