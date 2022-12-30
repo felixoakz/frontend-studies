@@ -15,11 +15,12 @@
                 );
             }
         </script>
-        <div class="px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="static/favicon.ico.png" alt="icon" width="250">
+
+        <div>
+            <img src="static/favicon.ico.png" alt="icon" width="150">
             <h1 class="fw-bold m-5">This page will serve as an attachment to your brain's "database"</h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-4">Mostly when we are learning a new thing, we can often get a bit anxious about the amount of information we find.
+            <div>
+              <p class="lead mb-3">Mostly when we are learning a new thing, we can often get a bit anxious about the amount of information we find.
                 This is because there are a LOT of shortcuts and commands in the various tools we need to learn.
                 And we still need to master and use all of this while we're learning and building even bigger things.<br><br>
     
@@ -28,7 +29,7 @@
                 until it becomes natural, giving us more time and energy to focus on what really matters right now.</p>
             </div>
         </div>
-        <div class="d-grid gap-2 col-6 mx-auto mb-3">
+        <div >
             {% for sheet in sheets %}
             <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'sql.html'" >{{ sheet }}</button>
             {% endfor %}
