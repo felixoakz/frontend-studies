@@ -47,9 +47,8 @@ def index():
         return render_template("index.html", sheets=SHEETS)
     else:
         sheet = request.form.get("sheet")
-        print(f'SYSTEM MSG:{sheet}')
-        return redirect("sheet.html", sheet=sheet)
-        
+        print(f'-----> SYSTEM MSG:{sheet}')
+        return redirect("sheet.html")
     
 #     # assign respective html form variables to its variables
 #     name = request.form.get("name")
