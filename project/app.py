@@ -44,6 +44,8 @@ SHEETS = [
 def index():
     if request.method == "GET":
         return render_template("index.html", sheets=SHEETS)
+    else:
+        return render_template("sheets.html", sheets=SHEETS)
         
     
 #     # assign respective html form variables to its variables
