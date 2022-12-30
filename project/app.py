@@ -36,6 +36,8 @@ CHEATSHEETS = [
     "VSCODE",
     "GIT"
 ]
+
+
 # index route
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -45,18 +47,18 @@ def index():
     else:
         
         
-        
-        # assign respective html form variables to its variables
-        name = request.form.get("name")
-        day = request.form.get("day")
-        month = request.form.get("month")
-        # insert given variables into database
-        cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", (name, day, month))
-        conn.commit()
-        return redirect("/")
+    
+#     # assign respective html form variables to its variables
+#     name = request.form.get("name")
+#     day = request.form.get("day")
+#     month = request.form.get("month")
+#     # insert given variables into database
+#     cursor.execute("INSERT INTO birthdays (name, day, month) VALUES (?, ?, ?)", (name, day, month))
+#     conn.commit()
+#     return redirect("/")
 
-    else:
-        # show all database
-        cursor.execute("SELECT * FROM birthdays")
-        birthdays = cursor.fetchall()
-        return render_template("index.html", birthdays=birthdays)
+# else:
+#     # show all database
+#     cursor.execute("SELECT * FROM birthdays")
+#     birthdays = cursor.fetchall()
+#     return render_template("index.html", birthdays=birthdays)

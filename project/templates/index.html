@@ -29,8 +29,8 @@
             </div>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto mb-3">
-            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'sql.html'" >SQL</button>
-            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'git.html'">GIT</button>
-            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'vscode.html'">VSCODE</button>
+            {{% for sheet in CHEATSHEETS %}}
+            <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'sql.html'" >{{ sheet }}</button>
+            {{ endfor }}
         </div>
 {% endblock %}
