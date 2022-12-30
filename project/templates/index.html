@@ -29,8 +29,8 @@
             </div>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto mb-3">
-            {{% for sheet in sheets %}}
+            {% for sheet in sheets %}
             <button class="btn btn-primary btn-dark" type="button" onclick="window.location.href = 'sql.html'" >{{ sheet }}</button>
-            {{ endfor }}
+            {% endfor %}
         </div>
 {% endblock %}

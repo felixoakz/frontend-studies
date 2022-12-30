@@ -34,7 +34,8 @@ def after_request(response):
 SHEETS = [
     "SQL",
     "VSCODE",
-    "GIT"
+    "GIT",
+    "HTML"
 ]
 
 
