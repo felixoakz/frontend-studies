@@ -35,7 +35,13 @@ def after_request(response):
 # index route
 @app.route("/", methods=["GET", "POST"])
 def index():
-    if request.method == "POST":
+    if request.method == "GET":
+        return render_template("index.html")
+    
+    else:
+        
+        
+        
         # assign respective html form variables to its variables
         name = request.form.get("name")
         day = request.form.get("day")
