@@ -20,10 +20,10 @@
             </thead>
 
             <tbody>
-                {% for sheet in cheatsheet %}
+                {% for sheet in sheets %}
                 <tr>
-                    <td>{{ cheatsheet.description }}</td>
-                    <td>{{ cheatsheet.command }}</td>
+                    <td>{{ sheet.description }}</td>
+                    <td>{{ sheet.command }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
