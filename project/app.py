@@ -31,6 +31,7 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
+
 SHEETS = [
     "SQL",
     "VSCODE",

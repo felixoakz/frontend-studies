@@ -34,10 +34,10 @@
         </div>
         
         <!-- button of each sheet -->
-        <div method="post" action="/">
+        <form method="post" action="/sheet">
             {% for sheet in sheets %}
-            <button class="btn btn-primary btn-dark my-4" name="sheet" type="button" value="{{ sheet }}">{{ sheet }}</button>
+            <input type="button" class="btn btn-primary btn-dark my-4" name="sheet" value="{{ sheet }}">
             {% endfor %}
-        </div>
+        </form>
 
 {% endblock %}
