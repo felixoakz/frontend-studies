@@ -13,7 +13,7 @@
     </head>
 
     <body>
-
+        <!-- Header/navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <div class="skiptranslate">
@@ -36,7 +36,8 @@
                 </div>
             </div>
         </nav>
-        <!-- to receive flashing messages -->
+
+        <!-- to receive quick flashing messages -->
         {% if get_flashed_messages() %}
         <header>
             <div class="alert alert-primary mb-0 text-center" role="alert">
@@ -44,10 +45,8 @@
             </div>
         </header>
         {% endif %}
-        <header>
 
-        </header>
-
+        <!-- Main block -->
         <div>
             <!-- other statics will render here -->
             <main class="container py-5 text-center">
@@ -57,7 +56,6 @@
         </div>
 
         <!-- footer -->
-
         <footer class="text-center">
             <div class="text-center p-3">
                 Idea and Engine made by:
