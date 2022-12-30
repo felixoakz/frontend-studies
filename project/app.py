@@ -13,9 +13,11 @@ print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
 cursor = conn.cursor()
 
 # Check if the table already exists
-cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='birthdays'")
-result = cursor.fetchone()
-print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
+try:
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='birthdays'")
+    result = cursor.fetchone()
+except:
+    print('>>>> SERVER MESSAGE: DATABASE EXISTS AND IS READY')
 
 # If the table does not exist, create it
 if result is None:
