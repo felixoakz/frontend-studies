@@ -31,7 +31,11 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-
+CHEATSHEETS = [
+    "SQL",
+    "VSCODE",
+    "GIT"
+]
 # index route
 @app.route("/", methods=["GET", "POST"])
 def index():
