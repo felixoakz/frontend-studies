@@ -60,6 +60,10 @@ def index():
         sheet = request.form.get("sheet")
         if sheet == "SQL":
             tables = SQL
+        elif sheet == "VSCODE":
+            tables = VSCODE
+        elif sheet == "GIT":
+            tables = GIT
         # sheet variable is sending selected button to new template
         return render_template("sheet.html", sheets=SHEETS, sheet=sheet, tables=tables)
     

@@ -14,16 +14,16 @@
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Description</th>
                     <th scope="col">Command</th>
+                    <th scope="col">Description</th>
                 </tr>
             </thead>
 
             <tbody>
                 {% for table in tables %}
                 <tr>
+                    <td align="right">{{ table.command }}</td>
                     <td>{{ table.description }}</td>
-                    <td>{{ table.command }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
