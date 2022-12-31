@@ -58,8 +58,10 @@ def index():
         return render_template("index.html", sheets=SHEETS)
     else:
         sheet = request.form.get("sheet")
+        if sheet == "SQL":
+            table = SQL
         # sheet variable is sending selected button to new template
-        return render_template("sheet.html", sheets=SHEETS, sheet=sheet)
+        return render_template("sheet.html", sheets=SHEETS, sheet=sheet, table=table)
     
     
 #     # assign respective html form variables to its variables
