@@ -1,5 +1,5 @@
 # Cheat Sheet Central 1.0
-#### Video Demo:  <URL HERE>
+#### Video Demo:  <URL https://youtu.be/5lMlsBnLndo>
 #### Description:
 
 ###### Intro:
