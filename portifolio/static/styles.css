@@ -470,6 +470,16 @@ h6 {
   background: #c4302b;
 }
 
+#dv::before {
+  display: inline-block;
+  content: '';
+  border-radius: 100%;
+  height: 4px;
+  width: 4px;
+  margin-right: 6px;
+  background: #f7f4f4;
+}
+
 #media, #address {
   text-align: right;
 }
