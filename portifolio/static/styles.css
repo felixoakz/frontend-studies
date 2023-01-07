@@ -323,7 +323,7 @@ h6 {
 }
 
 .project2::after {
-  content: "finance.";
+  content: "Treino Trader.";
   font-family: "Roboto Mono";
   font-size: 36px;
   position: relative;
@@ -359,7 +359,7 @@ h6 {
 }
 
 .project4::after {
-  content: "Treino Trader.";
+  content: "GitHub Repositories.";
   font-family: "Roboto Mono";
   font-size: 36px;
   position: relative;
