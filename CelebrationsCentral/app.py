@@ -55,4 +55,4 @@ def index():
         return render_template("index.html", birthdays=birthdays)
 
 # update all app before pushing to remote and publishing ii
-# remote is ok
+# remote is ok - testing
