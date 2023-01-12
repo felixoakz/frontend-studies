@@ -53,3 +53,5 @@ def index():
         cursor.execute("SELECT * FROM birthdays")
         birthdays = cursor.fetchall()
         return render_template("index.html", birthdays=birthdays)
+
+# all right to remote
