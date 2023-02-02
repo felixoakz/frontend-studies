@@ -10,7 +10,7 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
 # create database cursor and connect database
-conn = sqlite3.connect('birthdays.db', check_same_thread=False)
+conn = sqlite3.connect('birthdays.db')
 print('>>>> SERVER MESSAGE: DATABASE CONNECTED SUCCESSFULLY')
 cursor = conn.cursor()
 
