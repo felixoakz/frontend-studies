@@ -1,6 +1,6 @@
-
 /*--------------- basic styling --------------- */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -17,7 +17,7 @@ html, body {
 
 @media(max-width: 768px) {
   .whitespace {
-        display: none;
+    display: none;
   }
 }
 
@@ -34,36 +34,39 @@ html, body {
 }
 
 .anim-typewriter {
-  animation: typewriter 4s steps(40) 1s 1 normal both,
-  blinkTextCussor 500ms steps(40) infinite normal;
+  animation: typewriter 5s steps(40) 1s 1 normal both,
+    blinkTextCussor 500ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
   from {
-        width: 0;
+    width: 0;
   }
+
   to {
-        width: 22em;
+    width: 25em;
   }
 }
 
 @media(max-width: 768px) {
   @keyframes typewriter {
-        from {
-              width: 0;
-        }
-        to {
-              width: 17em;
-        }
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 17em;
+    }
   }
 }
 
 @keyframes blinkTextCussor {
   from {
-        border-right-color: rgba(255, 255, 255, 0.75);
+    border-right-color: rgba(255, 255, 255, 0.75);
   }
+
   to {
-        border-right-color: transparent;
+    border-right-color: transparent;
   }
 }
 
@@ -198,33 +201,33 @@ nav #menu li a:hover {
 
 @media(max-width: 768px) {
   #toggle {
-        visibility: visible;
-        opacity: 1;
-        margin-top: 6px;
-        margin-right: 4px;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+    margin-right: 4px;
   }
 
   nav #brand {
-        margin-left: 24px;
+    margin-left: 24px;
   }
 
   #menu a {
-        font-size: 20px;
-        font-weight: 300;
+    font-size: 20px;
+    font-weight: 300;
   }
 
   #resize li span {
-        font-weight: bolder;
+    font-weight: bolder;
   }
 
   nav #menu {
-        display: none;
+    display: none;
   }
 }
 
 @media(min-width: 768px) {
   #resize {
-        visibility: hidden !important;
+    visibility: hidden !important;
   }
 }
 
@@ -245,7 +248,7 @@ nav #menu li a:hover {
 
 @media(max-width: 768px) {
   .header h1 {
-        font-size: 26px;
+    font-size: 26px;
   }
 }
 
@@ -270,15 +273,17 @@ nav #menu li a:hover {
 
 @keyframes fade_move_down {
   0% {
-        transform: translate(0, -20px) rotate(45deg);
-        opacity: 0;
+    transform: translate(0, -20px) rotate(45deg);
+    opacity: 0;
   }
+
   50% {
-        opacity: 1;
+    opacity: 1;
   }
+
   100% {
-        transform: translate(0, 20px) rotate(45deg);
-        opacity: 0;
+    transform: translate(0, 20px) rotate(45deg);
+    opacity: 0;
   }
 }
 
@@ -373,16 +378,19 @@ h6 {
 
 @media(max-width: 768px) {
   .project {
-        width: 90% !important;
-        margin: 14px auto;
+    width: 90% !important;
+    margin: 14px auto;
   }
 
   .vertical {
-        display: none;
+    display: none;
   }
 
-  .project1::after, .project2::after, .project3::after, .project4::after {
-        display: none;
+  .project1::after,
+  .project2::after,
+  .project3::after,
+  .project4::after {
+    display: none;
   }
 }
 
@@ -417,6 +425,7 @@ h6 {
   font-size: 18px;
   padding-left: 20px;
 }
+
 #gh::before {
   display: inline-block;
   content: '';
@@ -480,7 +489,8 @@ h6 {
   background: #818080;
 }
 
-#media, #address {
+#media,
+#address {
   text-align: right;
 }
 
@@ -493,13 +503,17 @@ h6 {
 }
 
 @media(max-width: 768px) {
-  .collab, #personal, #media, #address {
-        text-align: center;
+
+  .collab,
+  #personal,
+  #media,
+  #address {
+    text-align: center;
   }
 
   .info ul {
-        margin: 0 0 0 -22px;
-        padding: 0;
+    margin: 0 0 0 -22px;
+    padding: 0;
   }
 }
 
@@ -521,9 +535,9 @@ h6 {
 
 @media(max-width: 768px) {
   .hero-content {
-        padding-top: 50px;
-        width: 96%;
-        margin: 0 auto;
+    padding-top: 50px;
+    width: 96%;
+    margin: 0 auto;
   }
 }
 
@@ -542,7 +556,8 @@ h6 {
 
 /*--------------- project page --------------- */
 
-.prev, .next p {
+.prev,
+.next p {
   color: grey;
 }
 
