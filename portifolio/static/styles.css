@@ -31,11 +31,12 @@ body {
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
+  font-size: 1.8em;
 }
 
 .anim-typewriter {
-  animation: typewriter 5s steps(40) 1s 1 normal both,
-    blinkTextCussor 500ms steps(40) infinite normal;
+  animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCussor 600ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
@@ -44,7 +45,7 @@ body {
   }
 
   to {
-    width: 25em;
+    width: 17em;
   }
 }
 
@@ -56,6 +57,18 @@ body {
 
     to {
       width: 17em;
+    }
+  }
+}
+
+@media(max-width: 450px) {
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 16.5em;
     }
   }
 }
@@ -249,6 +262,12 @@ nav #menu li a:hover {
 @media(max-width: 768px) {
   .header h1 {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero h1 {
+    font-size: 22px;
   }
 }
 
