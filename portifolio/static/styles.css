@@ -613,6 +613,10 @@ hr {
 /*---------------- spinning icon ---------------*/
 .spinning-icon {
   animation: spin 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 @keyframes spin {
@@ -623,4 +627,21 @@ hr {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* --------------- projects --------------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.projects a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
