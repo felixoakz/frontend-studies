@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      <title> Work | Portfolio | felixoakz </title>
+      <title> Project | Portfolio | felixoakz </title>
 
       <!-- stylesheet -->
       <link rel="stylesheet" href="static/styles.css">
@@ -18,6 +18,10 @@
       <!-- google fonts -->
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
             rel="stylesheet">
+
+      <!-- ionicons cdn -->
+      <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
 
       <!-- for on scroll animations -->
       <link rel="stylesheet" href="static/animate.css">
@@ -58,88 +62,93 @@
                         <li><a href="about.html">about me<span>.</span></a></li>
                   </ul>
             </div>
-
             <!--------------- navbar ends here --------------->
 
             <div class="whitespace"></div>
 
-            <!--------------- work section starts here --------------->
+            <!--------------- hero section starts here --------------->
             <div class="container">
                   <div class="hero-content">
                         <br><br>
-
                         <div class="row">
-                              <div class="col-lg-10">
+                              <div class="col-lg-12">
+                                    <br>
 
-                                    <h3 class="wow fadeInUp" data-wow-delay="1s">work.</h3><br>
-                                    <p class="wow fadeInUp" data-wow-delay="1.2s">I have experience building web
-                                          applications with databases and REST APIs, and I also enjoy scripting. I am
-                                          constantly seeking new challenges and opportunities to expand my skill set. I
-                                          usually alternate my time between taking online courses in programming
-                                          languages, working on projects, and solving problems on platforms like
-                                          HackerRank. I am driven to create
-                                          something that is not only meaningful and fulfilling to me, but also impactful
-                                          and useful to others. That's why my current tech stack is curated with a
-                                          purpose-driven mindset, aimed at solving real-world problems.<br><br><br>
-                                    <h4 class="wow fadeInUp" data-wow-delay="1.3s">Here are
-                                          some of my projects:</h4>
+                                    <h1 class="wow fadeInUp" data-wow-delay="1s">stockXchange</h1><br><br>
 
+                                    <div class="row">
+                                          <div class="col-lg-4">
+                                                <p class="wow fadeInUp" data-wow-delay="1.2s">type :</p>
+                                                <h6 class="wow fadeInUp" data-wow-delay="1.3s">Web Development</h6>
+                                          </div>
+
+                                          <div class="col-lg-4">
+                                                <p class="wow fadeInUp" data-wow-delay="1.4s">created in :</p>
+                                                <h6 class="wow fadeInUp" data-wow-delay="1.5s">january 2023</h6>
+                                          </div>
+
+                                    </div>
+                                    <br>
+                                    <p class="wow fadeInUp" data-wow-delay="1.8s">Find it live here: <a
+                                                href="https://stockxchange.onrender.com/">stockxchange.onrender.com</a>
+                                    </p>
+                                    <p class="wow fadeInUp" data-wow-delay="1.8s">A web app that allows
+                                          you to manage portfolios of stocks and track their prices and portfolio values
+                                          in real-time. You can access your portfolios on the go with its mobile
+                                          compatibility and perform "buy" and "sell" transactions by querying an API for
+                                          their prices. Built with Flask and hosted on Render, it uses Jinja templating
+                                          engine, Bootstrap, and a bit of CSS for its client-side. The password is
+                                          hashed for security, and the API is accessed via an environment variable. The
+                                          app is a demo version using the AlphaVantage API and a local CSV file, but is
+                                          limited by the API's usage limits. This project started as a Harvard CS50
+                                          course project and has taught the developer valuable lessons for future
+                                          improvements, such as using more functions or Django for abstractions and
+                                          improving data source through a better API or web scraping.</p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <!--------------- hero section ends here --------------->
+
+
+            <!--------------- project image section starts here --------------->
+
+            <div class="project-img">
+                  <div class="container">
+                        <br><br>
+                        <div class="row">
+                              <div class="col-md-8">
+                                    <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
+                              </div>
+                              <div class="col-md-4">
+                                    <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
                               </div>
                         </div>
                   </div>
             </div>
 
-            <!--------------- hero section ends here --------------->
+            <!--------------- project image section ends here --------------->
 
-            <!--------------- projects section starts here --------------->
-            <div class="container-fluid">
+            <br><br>
 
-                  <div class="whitespace"></div>
-                  <div class="whitespace"></div>
+            <!--------------- project nav starts here --------------->
 
-                  <div class="row">
-                        <div class="col-lg-8"></div>
-
-                        <div class="col-lg-4 project project1 wow fadeInUp" data-wow-delay="1.4s"
-                              onclick="location.href='stock.html'"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='pomodoro.html'">
+            <div class="project-nav">
+                  <div class="container">
+                        <div class="row">
+                              <div class="col-lg-6 prev">
+                                    <p><ion-icon name="arrow-back"></ion-icon>previous</p>
+                              </div>
+                              <div class="col-lg-6 next">
+                                    <p>next<ion-icon name="arrow-forward"></ion-icon></p>
+                              </div>
                         </div>
-
-                        <div class="col-lg-6"></div>
                   </div>
-
-                  <div class="whitespace"></div>
-
-                  <div class="row">
-                        <div class="col-lg-7"></div>
-
-                        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='simulations.html'">
-                        </div>
-
-                        <div class="col-lg-1"></div>
-                  </div>
-
-                  <div class="whitespace"></div>
-
-                  <!-- fourth project -->
-                  <!-- <div class="row">
-                        <div class="col-lg-1"></div>
-
-                        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'">
-                        </div>
-
-                        <div class="col-lg-6"></div>
-                  </div> -->
-
-                  <div class="whitespace"></div>
             </div>
 
-            <!--------------- projects section ends here --------------->
+            <!--------------- project nav starts here --------------->
+
+            <div class="whitespace"></div>
 
 
             <!--------------- footer starts here --------------->
@@ -149,9 +158,11 @@
 
                         <div class="collab">
                               <div class="row">
-                                    <div class="col-lg-12">With a love for building and striving to bring creative
-                                          solutions to the table,<br>I am ready to tackle new challenges and open
-                                          to opportunities in remote, on-site, and freelance projects.</p>
+                                    <div class="col-lg-12">
+                                          <p class="wow fadeInUp">With a love for building and striving to bring
+                                                creative solutions to the table,<br>I am ready to tackle new challenges
+                                                and open
+                                                to opportunities in remote, on-site, and freelance projects.</p>
                                     </div>
                               </div>
                         </div>
@@ -243,6 +254,8 @@
             }, 0.1);
 
             // nav animation ends
+
+
 
             new WOW().init();
 
