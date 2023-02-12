@@ -358,8 +358,6 @@ h6 {
 }
 
 .project1::after {
-  content: "stockXchange";
-  font-family: "Roboto Mono";
   font-size: 36px;
   position: relative;
   color: #fff;
@@ -376,8 +374,6 @@ h6 {
 }
 
 .project2::after {
-  content: "bash-pomodoro";
-  font-family: "Roboto Mono";
   font-size: 36px;
   position: relative;
   color: #fff;
@@ -394,8 +390,6 @@ h6 {
 }
 
 .project3::after {
-  content: "World-Cup-Simulations";
-  font-family: "Roboto Mono";
   font-size: 36px;
   position: relative;
   color: #fff;
