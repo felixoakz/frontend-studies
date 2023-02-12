@@ -317,6 +317,26 @@ h6 {
   text-align: center;
 }
 
+#github {
+  height: 12em;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  #github {
+    display: block;
+    width: 90%;
+    margin: 1%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
 .vertical {
   margin-top: 40px;
   border-left: 1px solid #fff;
@@ -637,6 +657,7 @@ hr {
   justify-content: center;
   background-color: #484747;
   padding: 10px;
+  margin-top: 2rem;
 }
 
 .projects a {
