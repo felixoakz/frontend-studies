@@ -38,7 +38,10 @@ def index():
 
 @app.route("/search")
 def search():
-    q = "%" + request.args.get("q") + "%"
-    shows = execute_query(
-        "SELECT * FROM shows WHERE title LIKE ?", (q,), fetch=True)
+    if q:
+        q = "%" + request.args.get("q") + "%"
+        shows = execute_query(
+            "SELECT * FROM shows WHERE title LIKE ?", (q,), fetch=True)
+    else:
+        shows = []
     return render_template("search.html", shows=shows)
