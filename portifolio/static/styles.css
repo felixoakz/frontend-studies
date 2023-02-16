@@ -357,10 +357,8 @@ hr {
 }
 
 .info h4 {
-  font-size: 80%;
-  text-align: center;
-  color: #464747;
-
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .info p {
@@ -470,97 +468,103 @@ hr {
     text-align: center;
   }
 
-  /*--------------- work page --------------- */
+  .info ul {
+    margin: 0 0 0 -22px;
+    padding: 0;
+  }
+}
 
+/*--------------- work page --------------- */
+
+.hero-content {
+  margin-left: 0%;
+}
+
+.hero-content p {
+  font-weight: 300;
+  line-height: 36px;
+  color: grey;
+  margin-bottom: 3rem;
+}
+
+.hero-content h6 {
+  text-align: left;
+}
+
+.hero-content h4 {
+  text-align: center;
+  color: #0077ff;
+}
+
+.hero-content img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width: 768px) {
   .hero-content {
-    margin-left: 0%;
+    padding-top: 50px;
+    width: 96%;
+    margin-bottom: 2rem;
+  }
+}
+
+/*---------------about page --------------- */
+
+.about {
+  height: 500px;
+  margin-top: 120px;
+}
+
+.image {
+  background: url("_MG_5249.jpg") no-repeat 50% 70%;
+  background-size: cover;
+}
+
+/*---------------- spinning icon ---------------*/
+.spinning-icon {
+  animation: spin 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
 
-  .hero-content p {
-    font-weight: 300;
-    line-height: 36px;
-    color: grey;
-    margin-bottom: em;
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  .hero-content h6 {
-    text-align: left;
-  }
+/* --------------- technologies --------------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 1rem;
+}
 
-  .hero-content h4 {
-    text-align: center;
-    color: #0077ff;
-  }
+.projects a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
 
-  .hero-content img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-  }
+.projects a:nth-child(7) {
+  transform: rotate(-35deg);
+  position: relative;
+  left: -10px;
+  top: 19px;
+}
 
-  @media(max-width: 768px) {
-    .hero-content {
-      padding-top: 50px;
-      width: 96%;
-      margin-bottom: 2rem;
-    }
-  }
-
-  /*---------------about page --------------- */
-
-  .about {
-    height: 500px;
-    margin-top: 120px;
-  }
-
-  .image {
-    background: url("_MG_5249.jpg") no-repeat 50% 70%;
-    background-size: cover;
-  }
-
-  /*---------------- spinning icon ---------------*/
-  .spinning-icon {
-    animation: spin 4s linear infinite;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.5rem;
-  }
-
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  /* --------------- technologies --------------- */
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-top: 1rem;
-  }
-
-  .projects a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-  }
-
-  .projects a:nth-child(7) {
-    transform: rotate(-35deg);
-    position: relative;
-    left: -10px;
-    top: 19px;
-  }
-
-  .projects a:nth-child(5) {
-    filter: invert(70%);
-  }
+.projects a:nth-child(5) {
+  filter: invert(70%);
+}
