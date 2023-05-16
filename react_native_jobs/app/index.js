@@ -1,11 +1,18 @@
-import { View, Text } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 
-const Home = () => {
+const YourApp = () => {
   return (
-    <View>
-      <Text>Heyyyyy</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Text>Heyyyy! 🎉</Text>
     </View>
   );
 };
 
-export default Home;
+export default YourApp;
