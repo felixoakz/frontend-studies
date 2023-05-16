@@ -10,7 +10,7 @@ const YourApp = () => {
         alignItems: "center",
       }}
     >
-      <Text>bucetooooo! 🎉</Text>
+      <Text>bucetooooo!</Text>
     </View>
   );
 };
