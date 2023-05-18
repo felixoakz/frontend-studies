@@ -17,7 +17,7 @@ const YourApp = () => {
       < Stack.Screen
         options={{
           headerStyle: {backgroundColor: COLORS.lightWhite },
-        }}
+        }};
     </SafeAreaView>
   );
 };
