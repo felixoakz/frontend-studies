@@ -1,6 +1,6 @@
-import React from "react";
-import { Text, View } from "react-native";
-
+import { useState } from "react";
+import { View, ScrollView, SafeAreaView } from "react-native";
+import 
 const YourApp = () => {
   return (
     <View
