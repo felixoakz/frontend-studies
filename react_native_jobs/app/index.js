@@ -13,13 +13,7 @@ import {
 const YourApp = () => {
   const router = useRouter();
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Text>bucetooooo!</Text>
     </SafeAreaView>
   );
