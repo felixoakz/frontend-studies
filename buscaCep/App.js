@@ -1,21 +1,19 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { safeAreaProvider } from "react-native-safe-area-context";
 
-const App = () => {
+const app = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Text>Hello MF</Text>
-      </View>
-    </SafeAreaView>
+    <safeAreaProvider style={styles.safeContainer}>
+      <Text>VAI TOMAR NO MEU CU PORRA</Text>
+    </safeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeContainer: {
     flex: 1,
   },
-  mainPage: {},
 });
 
-export default App;
+export default app;
