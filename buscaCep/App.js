@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   topBar: {
     flexDirection: "row",
     height: 70,
-    backgroundColor: "#3498db",
+    backgroundColor: "#23648f",
   },
   headings: {
     color: "#ffffff",
