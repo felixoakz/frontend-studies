@@ -1,6 +1,7 @@
+import React from "react";
 import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
-export default App = () => {
+const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -13,6 +14,8 @@ export default App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
   },
+  mainPage: {},
 });
+
+export default App;
