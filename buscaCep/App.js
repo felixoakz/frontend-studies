@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 const app = () => {
   const [cep, setCep] = useState("");
@@ -16,7 +22,9 @@ const app = () => {
           placeholder="CEP"
           style={styles.inputField}
         />
-        <Button title="Consultar" style={{ flex: 1 }} />
+        <TouchableOpacity style={styles.button}>
+          <Text style={{ fontSize: 20, color: "#ffffff" }}>Buscar</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -46,8 +54,20 @@ const styles = StyleSheet.create({
   },
   inputField: {
     flex: 2,
-    borderColor: "#000000",
+    paddingHorizontal: 10,
+    backgroundColor: "#f5f5f5",
     borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 8,
+    fontSize: 20,
+  },
+  button: {
+    flex: 1,
+    backgroundColor: "#23648f",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    marginLeft: 10,
   },
 });
 
