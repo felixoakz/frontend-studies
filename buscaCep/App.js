@@ -10,9 +10,9 @@ import {
 const app = () => {
   const [cep, setCep] = useState("");
   const [logradouro, setLogradouro] = useState("");
-  const [cep, setCep] = useState("");
-  const [cep, setCep] = useState("");
-  const [cep, setCep] = useState("");
+  const [bairro, setBairo] = useState("");
+  const [localidade, setLocalidade] = useState("");
+  const [uf, setUf] = useState("");
 
   return (
     <View style={styles.safeContainer}>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flexDirection: "row",
-    height: 70,
+    height: 60,
     marginHorizontal: 20,
     marginTop: 20,
   },
