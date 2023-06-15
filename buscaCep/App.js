@@ -4,7 +4,9 @@ import { View, Text, StyleSheet } from "react-native";
 const app = () => {
   return (
     <View style={styles.safeContainer}>
-      <View style={styles.topBar}></View>
+      <View style={styles.topBar}>
+        <Text style={styles.headings}>Buscador de CEP</Text>
+      </View>
     </View>
   );
 };
@@ -16,7 +18,14 @@ const styles = StyleSheet.create({
   topBar: {
     flexDirection: "row",
     height: 70,
-    backgroundColor: "#0D47A1",
+    backgroundColor: "#3498db",
+  },
+  headings: {
+    color: "#ffffff",
+    fontSize: 25,
+    fontWeight: "bold",
+    alignSelf: "center",
+    margin: 20,
   },
 });
 
