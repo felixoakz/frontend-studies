@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 
 const app = () => {
+  const [cep, setCep] = useState("hi porra");
+
   return (
     <View style={styles.safeContainer}>
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
       <View style={styles.cepContainer}>
-        <TextInput value="" />
+        <TextInput value={cep} />
       </View>
     </View>
   );
