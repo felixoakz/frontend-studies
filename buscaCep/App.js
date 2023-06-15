@@ -10,7 +10,7 @@ import {
 const app = () => {
   const [cep, setCep] = useState("");
   const [logradouro, setLogradouro] = useState("");
-  const [bairro, setBairo] = useState("");
+  const [bairro, setBairro] = useState("");
   const [localidade, setLocalidade] = useState("");
   const [uf, setUf] = useState("");
 
@@ -59,7 +59,7 @@ const app = () => {
           value={uf}
           onChangeText={(text) => setUf(text)}
           placeholder="UF"
-          style={[styles.inputField, {}]}
+          style={styles.ufField}
         />
       </View>
     </View>
@@ -104,6 +104,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 8,
     marginLeft: 10,
+  },
+  ufField: {
+    width: 100,
+    paddingHorizontal: 10,
+    backgroundColor: "#f5f5f5",
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 8,
+    fontSize: 20,
   },
 });
 
