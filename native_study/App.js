@@ -1,25 +1,38 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Button, Text, View, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
+  const onPress = () => setCount((prevCount) => prevCount + 1);
+
   return (
     <View style={styles.container}>
-      <Text>heyy</Text>
-      <Button style={styles.Button} title="ClickMe" />
-      <TouchableOpacity title="PressMe" />
-      <StatusBar style="auto" />
+      <View style={styles.countContainer}>
+        <Text>Count: {count}</Text>
+      </View>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
+        <Text>Press Here</Text>
+      </TouchableOpacity>
+      <Button title="Presss" style={styles.button} onPress={onPress} />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 10,
   },
-  Button: {
-    margin: 10,
+  button: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10,
+  },
+  countContainer: {
+    alignItems: "center",
+    padding: 10,
   },
 });
+
+export default App;
