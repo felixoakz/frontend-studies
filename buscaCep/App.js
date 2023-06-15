@@ -1,18 +1,23 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
-import { safeAreaProvider } from "react-native-safe-area-context";
+import { View, Text, StyleSheet } from "react-native";
 
 const app = () => {
   return (
-    <safeAreaProvider style={styles.safeContainer}>
-      <Text>VAI TOMAR NO MEU CU PORRA</Text>
-    </safeAreaProvider>
+    <View style={styles.safeContainer}>
+      <View style={styles.topBar}></View>
+    </View>
   );
 };
-
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
+    flexDirection: "column",
+  },
+  topBar: {
+    flex: 1,
+    flexDirection: "row",
+    height: 70,
+    backgroundColor: "#0D47A1",
   },
 });
 
