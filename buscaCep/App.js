@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   topBar: {
-    flex: 1,
     flexDirection: "row",
     height: 70,
     backgroundColor: "#0D47A1",
