@@ -9,13 +9,16 @@ import {
 
 const app = () => {
   const [cep, setCep] = useState("");
+  const [logradouro, setLogradouro] = useState("");
+  const [cep, setCep] = useState("");
+  const [cep, setCep] = useState("");
+  const [cep, setCep] = useState("");
 
   return (
     <View style={styles.safeContainer}>
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
-
       <View style={styles.container}>
         <TextInput
           value={cep}
@@ -27,8 +30,14 @@ const app = () => {
           <Text style={{ fontSize: 20, color: "#ffffff" }}>Buscar</Text>
         </TouchableOpacity>
       </View>
-
-      <View style={styles.container}></View>
+      <View style={styles.container}>
+        <TextInput
+          value={logradouro}
+          onChangeText={(text) => setLogradouro(text)}
+          placeholder="Logradouro"
+          style={styles.inputField}
+        />
+      </View>
     </View>
   );
 };
