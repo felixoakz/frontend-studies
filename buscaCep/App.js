@@ -15,6 +15,7 @@ const app = () => {
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
+
       <View style={styles.container}>
         <TextInput
           value={cep}
@@ -26,6 +27,7 @@ const app = () => {
           <Text style={{ fontSize: 20, color: "#ffffff" }}>Buscar</Text>
         </TouchableOpacity>
       </View>
+
       <View style={styles.container}></View>
     </View>
   );
