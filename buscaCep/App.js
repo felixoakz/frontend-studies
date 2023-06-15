@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 
 const app = () => {
   return (
@@ -7,7 +7,9 @@ const app = () => {
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
-      <View></View>
+      <View style={styles.cepContainer}>
+        <TextInput value="" />
+      </View>
     </View>
   );
 };
@@ -27,6 +29,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     alignSelf: "center",
     margin: 20,
+  },
+  cepContainer: {
+    flexDirection: "row",
+    height: 100,
+    marginHorizontal: 20,
+    backgroundColor: "#ff0000",
   },
 });
 
