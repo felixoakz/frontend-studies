@@ -59,7 +59,7 @@ const app = () => {
           value={uf}
           onChangeText={(text) => setUf(text)}
           placeholder="UF"
-          style={styles.inputField}
+          style={[styles.inputField, {}]}
         />
       </View>
     </View>
