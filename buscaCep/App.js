@@ -38,6 +38,30 @@ const app = () => {
           style={styles.inputField}
         />
       </View>
+      <View style={styles.container}>
+        <TextInput
+          value={bairro}
+          onChangeText={(text) => setBairro(text)}
+          placeholder="Bairro"
+          style={styles.inputField}
+        />
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={localidade}
+          onChangeText={(text) => setLocalidade(text)}
+          placeholder="Localidade"
+          style={styles.inputField}
+        />
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={uf}
+          onChangeText={(text) => setUf(text)}
+          placeholder="UF"
+          style={styles.inputField}
+        />
+      </View>
     </View>
   );
 };
