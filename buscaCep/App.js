@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button } from "react-native";
 
 const app = () => {
   const [cep, setCep] = useState("");
@@ -14,7 +14,9 @@ const app = () => {
           value={cep}
           onChangeText={(text) => setCep(text)}
           placeholder="CEP"
+          style={{ flex: 2, borderColor: "#000000", borderWidth: 1 }}
         />
+        <Button title="Consultar" style={{ flex: 1 }} />
       </View>
     </View>
   );
@@ -40,6 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     height: 100,
     marginHorizontal: 20,
+    marginTop: 20,
     backgroundColor: "#ff0000",
   },
 });
