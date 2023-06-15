@@ -26,6 +26,7 @@ const app = () => {
           <Text style={{ fontSize: 20, color: "#ffffff" }}>Buscar</Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.container}></View>
     </View>
   );
 };
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flexDirection: "row",
-    height: 100,
+    height: 70,
     marginHorizontal: 20,
     marginTop: 20,
   },
