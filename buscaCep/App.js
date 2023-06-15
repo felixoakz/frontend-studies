@@ -9,12 +9,12 @@ const app = () => {
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
-      <View style={styles.cepContainer}>
+      <View style={styles.container}>
         <TextInput
           value={cep}
           onChangeText={(text) => setCep(text)}
           placeholder="CEP"
-          style={{ flex: 2, borderColor: "#000000", borderWidth: 1 }}
+          style={styles.inputField}
         />
         <Button title="Consultar" style={{ flex: 1 }} />
       </View>
@@ -38,12 +38,16 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     margin: 20,
   },
-  cepContainer: {
+  container: {
     flexDirection: "row",
     height: 100,
     marginHorizontal: 20,
     marginTop: 20,
-    backgroundColor: "#ff0000",
+  },
+  inputField: {
+    flex: 2,
+    borderColor: "#000000",
+    borderWidth: 1,
   },
 });
 
