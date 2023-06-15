@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 
 const app = () => {
-  const [cep, setCep] = useState("hi porra");
+  const [cep, setCep] = useState("");
 
   return (
     <View style={styles.safeContainer}>
@@ -10,7 +10,11 @@ const app = () => {
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
       <View style={styles.cepContainer}>
-        <TextInput value={cep} />
+        <TextInput
+          value={cep}
+          onChangeText={(text) => setCep(text)}
+          placeholder="CEP"
+        />
       </View>
     </View>
   );
