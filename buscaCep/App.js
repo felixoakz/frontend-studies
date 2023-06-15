@@ -72,15 +72,15 @@ const styles = StyleSheet.create({
   },
   topBar: {
     flexDirection: "row",
-    height: 70,
+    height: 80,
     backgroundColor: "#23648f",
+    paddingTop: 10,
   },
   headings: {
     color: "#ffffff",
     fontSize: 25,
     fontWeight: "bold",
-    alignSelf: "center",
-    margin: 20,
+    marginHorizontal: 20,
   },
   container: {
     flexDirection: "row",
