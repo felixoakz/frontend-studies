@@ -7,6 +7,7 @@ const app = () => {
       <View style={styles.topBar}>
         <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
+      <View></View>
     </View>
   );
 };
