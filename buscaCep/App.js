@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: "bold",
     marginHorizontal: 20,
+    marginTop: 30,
   },
   container: {
     flexDirection: "row",
