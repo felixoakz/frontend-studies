@@ -18,7 +18,7 @@ const app = () => {
 
   const buscarCep = async () => {
     if (cep == "") {
-      Alert.alert("Nenhum CEP digitado");
+      Alert.alert("Nenhum CEP fornecido");
       setCep("");
     }
 
