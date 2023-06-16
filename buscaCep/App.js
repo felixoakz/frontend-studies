@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Alert,
 } from "react-native";
-import Api from ".sr";
+import api from "./src/services/api";
 
 const app = () => {
   const [cep, setCep] = useState("");
