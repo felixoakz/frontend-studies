@@ -23,7 +23,7 @@ const app = () => {
     }
 
     try {
-      const response = await api.get("");
+      const response = await api.get(`/${cep}/json/`);
     } catch (error) {
       console.log("ERRO ", error);
     }
