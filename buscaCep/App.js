@@ -50,7 +50,7 @@ const app = () => {
         <TextInput
           value={localidade}
           onChangeText={(text) => setLocalidade(text)}
-          placeholder="Localidade"
+          placeholder="Cidade"
           style={styles.inputField}
         />
       </View>
