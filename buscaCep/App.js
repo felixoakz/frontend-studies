@@ -24,6 +24,10 @@ const app = () => {
 
     try {
       const response = await api.get(`/${cep}/json/`);
+      setLogradouro(response.data.logradouro);
+      setBairro(response.data.bairro);
+      setLocalidade(response.data.localidade);
+      setUf(response.data.uf);
     } catch (error) {
       console.log("ERRO ", error);
     }
