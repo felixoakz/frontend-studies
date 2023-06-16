@@ -5,7 +5,9 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Alert,
 } from "react-native";
+import Api from ".src/services/api";
 
 const app = () => {
   const [cep, setCep] = useState("");
@@ -13,6 +15,13 @@ const app = () => {
   const [bairro, setBairro] = useState("");
   const [localidade, setLocalidade] = useState("");
   const [uf, setUf] = useState("");
+
+  const buscarCep = () => {
+    if (cep == "") {
+      Alert.alert("Nenhum CEP digitado");
+      setCep("");
+    }
+  };
 
   return (
     <View style={styles.safeContainer}>
@@ -27,7 +36,9 @@ const app = () => {
           style={styles.inputField}
         />
         <TouchableOpacity style={styles.button}>
-          <Text style={{ fontSize: 20, color: "#ffffff" }}>Buscar</Text>
+          <Text style={{ fontSize: 20, color: "#ffffff" }} onPress={buscarCep}>
+            Buscar
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.container}>
