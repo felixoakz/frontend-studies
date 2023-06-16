@@ -16,10 +16,16 @@ const app = () => {
   const [localidade, setLocalidade] = useState("");
   const [uf, setUf] = useState("");
 
-  const buscarCep = () => {
+  const buscarCep = async () => {
     if (cep == "") {
       Alert.alert("Nenhum CEP digitado");
       setCep("");
+    }
+
+    try {
+      const response = await api.get("");
+    } catch (error) {
+      console.log("ERRO ", error);
     }
   };
 
