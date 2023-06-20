@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: 64,
     height: 64,
-    borderRadius: "50%",
+    borderRadius: 50,
   },
   heading: {
     fontSize: 20,
