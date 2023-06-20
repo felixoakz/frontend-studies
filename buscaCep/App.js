@@ -30,7 +30,7 @@ const app = () => {
       setLocalidade(response.data.localidade);
       setUf(response.data.uf);
     } catch (error) {
-      console.log("ERRO ", error);
+      console.log("ERRO: ", error);
     }
   };
 
