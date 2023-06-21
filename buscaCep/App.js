@@ -8,7 +8,6 @@ import {
   Alert,
 } from "react-native";
 import api from "./src/services/api";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const app = () => {
   const [cep, setCep] = useState("");
@@ -35,61 +34,56 @@ const app = () => {
   };
 
   return (
-    <SafeAreaView>
-      <View style={styles.safeContainer}>
-        <View style={styles.topBar}>
-          <Text style={styles.headings}>Buscador de CEP</Text>
-        </View>
-        <View style={styles.container}>
-          <TextInput
-            value={cep}
-            onChangeText={(text) => setCep(text)}
-            placeholder="CEP"
-            style={styles.inputField}
-          />
-          <TouchableOpacity style={styles.button}>
-            <Text
-              style={{ fontSize: 20, color: "#ffffff" }}
-              onPress={buscarCep}
-            >
-              Buscar
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View style={styles.container}>
-          <TextInput
-            value={logradouro}
-            onChangeText={(text) => setLogradouro(text)}
-            placeholder="Logradouro"
-            style={styles.inputField}
-          />
-        </View>
-        <View style={styles.container}>
-          <TextInput
-            value={bairro}
-            onChangeText={(text) => setBairro(text)}
-            placeholder="Bairro"
-            style={styles.inputField}
-          />
-        </View>
-        <View style={styles.container}>
-          <TextInput
-            value={localidade}
-            onChangeText={(text) => setLocalidade(text)}
-            placeholder="Cidade"
-            style={styles.inputField}
-          />
-        </View>
-        <View style={styles.container}>
-          <TextInput
-            value={uf}
-            onChangeText={(text) => setUf(text)}
-            placeholder="UF"
-            style={styles.ufField}
-          />
-        </View>
+    <View style={styles.safeContainer}>
+      <View style={styles.topBar}>
+        <Text style={styles.headings}>Buscador de CEP</Text>
       </View>
-    </SafeAreaView>
+      <View style={styles.container}>
+        <TextInput
+          value={cep}
+          onChangeText={(text) => setCep(text)}
+          placeholder="CEP"
+          style={styles.inputField}
+        />
+        <TouchableOpacity style={styles.button}>
+          <Text style={{ fontSize: 20, color: "#ffffff" }} onPress={buscarCep}>
+            Buscar
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={logradouro}
+          onChangeText={(text) => setLogradouro(text)}
+          placeholder="Logradouro"
+          style={styles.inputField}
+        />
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={bairro}
+          onChangeText={(text) => setBairro(text)}
+          placeholder="Bairro"
+          style={styles.inputField}
+        />
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={localidade}
+          onChangeText={(text) => setLocalidade(text)}
+          placeholder="Cidade"
+          style={styles.inputField}
+        />
+      </View>
+      <View style={styles.container}>
+        <TextInput
+          value={uf}
+          onChangeText={(text) => setUf(text)}
+          placeholder="UF"
+          style={styles.ufField}
+        />
+      </View>
+    </View>
   );
 };
 const styles = StyleSheet.create({
