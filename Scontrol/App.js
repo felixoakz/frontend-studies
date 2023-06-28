@@ -1,5 +1,4 @@
-import { View } from "react-native";
-import Home from "./src/pages/Home/index";
+import Home from "./src/pages/Home";
 
 const App = () => {
   return <Home />;
